@@ -75,3 +75,6 @@ build/
 
 # Specific exclusions for important files
 !.gitignore
+
+config.env
+env.txt
