@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://4dehrp7a5sk"]
+
+[ext_resource type="Script" path="res://world.gd" id="1_jtjee"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_jtjee")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 33.0
+offset_top = 28.0
+offset_right = 577.0
+offset_bottom = 189.0
+text = "1. Copy the config folder into your project.
+2. Autoload env_loader.gd with class name as EnvLoader
+3. Rename env.example.txt to env.txt
+4. Update env.txt to suit your needs
+5. Add env.txt to .gitignore"
