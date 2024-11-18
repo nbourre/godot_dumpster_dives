@@ -13,3 +13,65 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Ignore all user-specific Godot settings and generated files
+*.import/
+.import/
+.export/
+*.godot/
+*.engine.cfg
+*.engine.mono.cfg
+*.mono/
+*.mono.temp/
+*.tres
+*.res
+
+# Godot cache files
+*.cache/
+
+# Visual Studio Code settings and files
+.vscode/
+*.code-workspace
+
+# Compiled files and binaries
+*.exe
+*.dll
+*.so
+*.dylib
+*.class
+*.pyc
+*.pyo
+*.pdb
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Backup files
+*.bak
+*.tmp
+*.temp
+*.~*
+
+# Node.js dependencies (if any)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Godot export templates and builds
+export/
+build/
+*.pck
+*.exe
+*.apk
+*.ipa
+
+# Ignore hidden files and folders (except .git/)
+.*
+!.git/
+
+# Specific exclusions for important files
+!.gitignore
