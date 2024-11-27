@@ -5,4 +5,4 @@
 
 [node name="LevelManager" type="Node2D"]
 script = ExtResource("1_wut3d")
-current_level = ExtResource("2_53kxi")
+level_scene = ExtResource("2_53kxi")

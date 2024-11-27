@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://cycu1hvt0wetg"]
+
+[ext_resource type="Script" path="res://level_goal.gd" id="1_8a2ld"]
+[ext_resource type="Shader" path="res://level_goal.gdshader" id="2_kuqh5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yv74i"]
+size = Vector2(160, 40)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_07tcx"]
+shader = ExtResource("2_kuqh5")
+shader_parameter/rect_size = Vector2(0.1, 0.2)
+shader_parameter/bness = 1.0
+shader_parameter/fall_off_scale = 3.0
+shader_parameter/b_offset = 0.0
+
+[node name="LevelGoal" type="Node2D"]
+script = ExtResource("1_8a2ld")
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_yv74i")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_07tcx")
+offset_left = -80.0
+offset_top = -20.0
+offset_right = 80.0
+offset_bottom = 20.0
+color = Color(1, 1, 0.372549, 1)
+
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

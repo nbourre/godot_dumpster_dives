@@ -2,9 +2,11 @@ extends Level
 
 @onready var polygon := $Polygon2D
 var bounds := Rect2()
+@onready var starting_point : Marker2D = $StartingPoint
 
 func _ready() -> void:
 	bounds = get_limits()
+	starting_point.position.x = bounds.size.x / 2
 
 func get_limits() -> Rect2:
 	var result := Rect2()
@@ -24,3 +26,9 @@ func get_limits() -> Rect2:
 
 func get_bounding_rect() -> Rect2 :
 	return bounds
+
+func get_starting_point() -> Vector2 :
+	return starting_point.position
+
+func get_goal() -> LevelGoal:
+	return $LevelGoal
