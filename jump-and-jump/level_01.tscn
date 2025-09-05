@@ -9,16 +9,16 @@ script = ExtResource("1_25fpc")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(0, 0, 500, 0, 500, 3000, 3500, 3000, 3500, 0, 4000, 0, 4000, 3500, 0, 3500)
+polygon = PackedVector2Array(0, 0, 250, 0, 250, 3000, 2500, 3000, 2500, 0, 2750, 0, 2750, 3250, 0, 3250)
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-polygon = PackedVector2Array(0, 0, 500, 0, 500, 3000, 3500, 3000, 3500, 0, 4000, 0, 4000, 3500, 0, 3500)
+polygon = PackedVector2Array(0, 0, 250, 0, 250, 3000, 2500, 3000, 2500, 0, 2750, 0, 2750, 3250, 0, 3250)
 
 [node name="StartingPoint" type="Marker2D" parent="."]
-position = Vector2(2030, 2648)
+position = Vector2(1408, 2592)
 
 [node name="StartingBlock" type="StaticBody2D" parent="."]
-position = Vector2(-23, 50)
+position = Vector2(-681, 52)
 metadata/_edit_group_ = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StartingBlock"]
@@ -28,5 +28,5 @@ polygon = PackedVector2Array(1775, 2950, 1775, 2700, 2350, 2700, 2350, 2950)
 polygon = PackedVector2Array(1775, 2950, 1775, 2700, 2350, 2700, 2350, 2950)
 
 [node name="LevelGoal" parent="." instance=ExtResource("2_eagag")]
-position = Vector2(2000, 100)
-scale = Vector2(20, 1)
+position = Vector2(1412, 114)
+scale = Vector2(15, 0.75)
