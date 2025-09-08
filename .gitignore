@@ -23,8 +23,9 @@ mono_crash.*.json
 *.engine.mono.cfg
 *.mono/
 *.mono.temp/
-*.tres
-*.res
+
+#*.tres
+#*.res
 
 # Godot cache files
 *.cache/
