@@ -3,18 +3,19 @@
 [ext_resource type="Script" uid="uid://beq0iolg75jc2" path="res://world.gd" id="1_m48yq"]
 [ext_resource type="PackedScene" uid="uid://dfmk27en81ptv" path="res://player.tscn" id="1_vtvc8"]
 [ext_resource type="PackedScene" uid="uid://ch7qce7qfdsvf" path="res://level_manager.tscn" id="2_fcwvr"]
-[ext_resource type="PackedScene" uid="uid://dc5lbi7pjhh0i" path="res://level_01.tscn" id="3_g3l0p"]
-[ext_resource type="Script" uid="uid://5ah474rdwk7d" path="res://camera_2d.gd" id="3_untec"]
+[ext_resource type="PackedScene" uid="uid://dc5lbi7pjhh0i" path="res://level_01.tscn" id="3_6l2su"]
+[ext_resource type="Script" path="res://camera_2d.gd" id="3_untec"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_m48yq")
 
 [node name="LevelManager" parent="." instance=ExtResource("2_fcwvr")]
-level_scene = ExtResource("3_g3l0p")
+initial_level = ExtResource("3_6l2su")
 
 [node name="Player" parent="." instance=ExtResource("1_vtvc8")]
 position = Vector2(438, 67)
 
-[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player", "lvl_mgr")]
 script = ExtResource("3_untec")
 player = NodePath("../Player")
+lvl_mgr = NodePath("../LevelManager")
