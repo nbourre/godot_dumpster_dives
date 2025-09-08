@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://dc5lbi7pjhh0i"]
+[gd_scene load_steps=4 format=3 uid="uid://dc5lbi7pjhh0i"]
 
-[ext_resource type="Script" path="res://level_01.gd" id="1_25fpc"]
+[ext_resource type="Script" uid="uid://0xii0e5p4qcr" path="res://level_01.gd" id="1_25fpc"]
+
+[sub_resource type="Gradient" id="Gradient_bri2l"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 0.270193, 0.0898522, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dvup1"]
+gradient = SubResource("Gradient_bri2l")
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_25fpc")
@@ -11,4 +17,7 @@ script = ExtResource("1_25fpc")
 polygon = PackedVector2Array(-5, -5, -3, 2612, 1616, 2618, 1556, -1, 2263, 29, 2179, 2810, -255, 2794, -262, -8)
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
+texture = SubResource("GradientTexture1D_dvup1")
+texture_scale = Vector2(0.1, 0.1)
+texture_rotation = -1.5708
 polygon = PackedVector2Array(-5, -5, -3, 2612, 1616, 2618, 1556, -1, 2263, 29, 2179, 2810, -255, 2794, -262, -8)
