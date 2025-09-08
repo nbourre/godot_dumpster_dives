@@ -9,6 +9,8 @@ export_presets.cfg
 # Imported translations (automatically generated from CSV files)
 *.translation
 
+# Ignore all .import files in all subdirectories
+**/*.import
 # Mono-specific ignores
 .mono/
 data_*/
@@ -17,6 +19,7 @@ mono_crash.*.json
 # Ignore all user-specific Godot settings and generated files
 *.import/
 .import/
+*.import
 .export/
 *.godot/
 *.engine.cfg
