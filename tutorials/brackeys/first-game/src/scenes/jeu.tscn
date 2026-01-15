@@ -207,10 +207,10 @@ text = "Tomber
 fait mal"
 
 [node name="Label3" type="Label" parent="Niveau/Étiquettes"]
-offset_left = 343.0
-offset_top = 110.0
-offset_right = 423.0
-offset_bottom = 133.0
+offset_left = 334.0
+offset_top = 91.0
+offset_right = 414.0
+offset_bottom = 121.0
 theme_override_colors/font_color = Color(0.244776, 0.244776, 0.244776, 1)
 theme_override_fonts/font = ExtResource("7_nm8ce")
 theme_override_font_sizes/font_size = 8

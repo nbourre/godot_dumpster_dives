@@ -33,4 +33,3 @@ func _on_Area2D_body_entered(body):
 
 ---
 Bravo ! Tu as maintenant un jeu où le joueur peut sauter, se déplacer et ramasser des objets. Tu peux ajouter des ennemis, des effets sonores, et bien plus encore !
-Bravo! Tu as maintenant un jeu où le joueur peut sauter, se déplacer et ramasser des objets. Tu peux ajouter des ennemis, des effets sonores, et bien plus encore!

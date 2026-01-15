@@ -10,13 +10,22 @@ Godot est un logiciel gratuit qui permet de créer des jeux vidéo facilement. I
 - Il permet de créer des jeux en 2D et en 3D.
 - Il est gratuit et open source.
 
-## Installer Godot
+## Installer et exécuter Godot
 1. Va sur le site officiel : https://godotengine.org/
-	<!-- Insère capture d'écran ici (site officiel Godot) -->
+	![alt text](assets/godotengine_org.png)
 2. Télécharge la version la plus récente.
-	<!-- Insère capture d'écran ici (bouton téléchargement) -->
-3. Installe le logiciel sur ton ordinateur.
-	<!-- Insère capture d'écran ici (installation) -->
+	![alt text](assets/godot_download.png)
+3. Vas dans ton dossier de téléchargements.
+4. Trouve le fichier téléchargé (par exemple, `Godot_v4.5.1-stable_win64.exe`).
+5. Clic-droit sur le fichier et sélectionne "Extraire tout...".
+6. Appuie sur "Extraire" pour décompresser Godot dans un dossier.
+7. Une nouvelle fenêtre s'ouvre avec le fichier du programme Godot.
+8. Double-clique sur le fichier qui ressemble à `Godot_v4.4.1-stable_win64` pour lancer Godot.
+
+### Alternative : Utiliser Godot en ligne
+Si tu ne veux pas installer Godot, tu peux l'utiliser directement dans ton navigateur web : https://tinyurl.com/gd4web ou
+ https://editor.godotengine.org/releases/latest/
+	![alt text](assets/godot_web_editor.png)
 
 ## Créer ton premier projet
 

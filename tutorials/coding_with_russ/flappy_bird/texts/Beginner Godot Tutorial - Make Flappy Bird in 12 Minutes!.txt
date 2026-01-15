@@ -1,0 +1,988 @@
+00:00 hello folks in this video I'm going to
+00:03 
+
+00:03 show you how to create this Flappy Bird
+00:05 
+
+00:05 clone in Godot if you want to follow
+00:07 
+
+00:07 along the code and the assets are all on
+00:09 
+
+00:09 my GitHub which is linked in the video
+00:10 
+
+00:11 description I start off with a blank
+00:13 
+
+00:13 scene and create a basic node
+00:16 
+
+00:16 rename it to Main and then save the
+00:18 
+
+00:18 scene inside the scenes folder
+00:21 
+
+00:21 next I'll add a 2d Sprite node as a
+00:23 
+
+00:23 child and rename it to your background
+00:26 
+
+00:26 drag over the image called BG from the
+00:29 
+
+00:29 assets folder into the texture property
+00:31 
+
+00:31 and it will show up on the 2D View
+00:34 
+
+00:34 next go into the project settings and
+00:37 
+
+00:37 set the window size to 864 by 936
+00:41 
+
+00:41 adjust the X and Y offset of the
+00:43 
+
+00:43 background image to position it
+00:45 
+
+00:45 correctly on the screen
+00:47 
+
+00:47 if I run the game now we can see that
+00:49 
+
+00:49 background image being shown
+00:52 
+
+00:52 create a new scene with a character body
+00:55 
+
+00:55 2D node rename it to invert and save the
+00:59 
+
+00:59 scene in that same folder add the
+01:01 
+
+01:01 animated Sprite 2D and collision shape
+01:03 
+
+01:03 2D node create a new animation and then
+01:06 
+
+01:06 drag over the three bird images
+01:08 
+
+01:08 then change the name of the animation
+01:10 
+
+01:10 from default to fly
+01:12 
+
+01:12 for the Collision create a capsule
+01:15 
+
+01:15 Collision shape
+01:18 
+
+01:18 rotated 90 degrees and then size it to
+01:21 
+
+01:21 match the image
+01:23 
+
+01:23 now we can add a script to the bird
+01:24 
+
+01:24 scene we will Define a few variables
+01:27 
+
+01:27 from the beginning gravity will
+01:29 
+
+01:29 determine how quickly the bird drops Max
+01:31 
+
+01:31 velocity will limit the max full speed
+01:33 
+
+01:33 and flap speed will control how much the
+01:36 
+
+01:36 bird jumps up play around with these
+01:38 
+
+01:38 numbers to adjust the physics in your
+01:40 
+
+01:40 game the flying variable is a flag that
+01:43 
+
+01:43 is active as long as the bird hasn't
+01:44 
+
+01:44 collided with anything the falling flag
+01:46 
+
+01:46 is active when a bird hits a pipe and
+01:48 
+
+01:48 falls to the Ground start pause defines
+01:51 
+
+01:51 the coordinates of the bird at the start
+01:53 
+
+01:53 of the game the ready function will fire
+01:55 
+
+01:55 the reset function which will reset the
+01:57 
+
+01:57 flags and position the bird correctly as
+01:60 
+
+01:60 well as reset any rotation that has been
+02:02 
+
+02:02 applied physics process will handle all
+02:04 
+
+02:04 the bird movement first check if the
+02:06 
+
+02:06 bird is in the air and apply gravity we
+02:08 
+
+02:08 will also apply terminal velocity by
+02:10 
+
+02:11 limiting the velocity to the max Bell
+02:13 
+
+02:13 variable as long as the bird is flying
+02:15 
+
+02:15 rotate it and play the animation else if
+02:17 
+
+02:17 the bird hits a pipe and is falling
+02:19 
+
+02:19 rotate it to face down and stop the
+02:22 
+
+02:22 animation then then run the move and
+02:24 
+
+02:24 Collide function to move the bird a
+02:26 
+
+02:26 final else statement will trigger if the
+02:28 
+
+02:28 bird isn't in the air where we just want
+02:30 
+
+02:30 to stop the animation completely lastly
+02:32 
+
+02:32 Define a function to allow the bird to
+02:34 
+
+02:34 Flap and fly upwards if I run just this
+02:37 
+
+02:37 scene with F6 we can see the bird coming
+02:40 
+
+02:40 up on the screen now back on the main
+02:42 
+
+02:42 scene instantiate the bird scene to
+02:44 
+
+02:44 bring it in
+02:45 
+
+02:45 now we can add a script to the main
+02:47 
+
+02:47 scene
+02:48 
+
+02:48 we'll begin the script with all the game
+02:51 
+
+02:51 variables the first two are flags to
+02:53 
+
+02:53 determine the game state next a scroll
+02:56 
+
+02:56 variable that we'll use to move the
+02:58 
+
+02:58 images across the screen smoothly then a
+03:00 
+
+03:00 score variable to track progress scroll
+03:02 
+
+03:02 speed is a constant that you can adjust
+03:04 
+
+03:04 to make the game slower or faster screen
+03:07 
+
+03:07 size and ground height are placeholders
+03:09 
+
+03:09 for now but we will come back to these
+03:11 
+
+03:11 pipes is an array to allow us to store
+03:13 
+
+03:13 all the pipes that we create and then a
+03:15 
+
+03:15 couple of final variables to control the
+03:16 
+
+03:17 pipe generation we will look at these in
+03:19 
+
+03:19 more detail once the pipes are added the
+03:21 
+
+03:21 ready script will fire the new game
+03:22 
+
+03:22 function this function will Define or
+03:25 
+
+03:25 reset the starting variables and run the
+03:28 
+
+03:28 birds reset function together ready then
+03:30 
+
+03:30 we create an input function first check
+03:32 
+
+03:32 that the game isn't over then look for a
+03:35 
+
+03:35 mouse click when the game first starts
+03:37 
+
+03:37 the bird is stationary until the mouse
+03:39 
+
+03:39 is clicked so the first Mouse clicked
+03:41 
+
+03:41 should start the game and the subsequent
+03:42 
+
+03:42 Mouse click flaps the bird wings we add
+03:45 
+
+03:45 a check to see if the game is running
+03:46 
+
+03:46 and if it isn't then we use this first
+03:48 
+
+03:48 first click to start the game if the
+03:50 
+
+03:50 game is already running and the bird is
+03:52 
+
+03:52 flying I it hasn't hit a pipe or the
+03:55 
+
+03:55 ground then flap its wings the start
+03:57 
+
+03:57 game function will start the game set
+03:59 
+
+03:59 the bird flying flag to true and flap
+04:01 
+
+04:01 its wings and now we can see the bird in
+04:03 
+
+04:03 its starting position but as soon as I
+04:05 
+
+04:05 start to click the game begins and the
+04:07 
+
+04:07 bird moves up and down next create a new
+04:10 
+
+04:10 scene add an area to the node called
+04:12 
+
+04:12 ground and two child nodes for sprite
+04:15 
+
+04:15 and collision shape 2D load the ground
+04:18 
+
+04:18 image like before and position the area
+04:20 
+
+04:20 at the bottom of the window
+04:22 
+
+04:22 then offset the image x coordinate
+04:25 
+
+04:25 and create a rectangle Collision shape
+04:27 
+
+04:27 to cover it
+04:30 
+
+04:30 while we're here we can add a script to
+04:32 
+
+04:32 detect collusion
+04:34 
+
+04:34 create a signal called Hit go into the
+04:37 
+
+04:37 Collision shape node and connect the
+04:39 
+
+04:39 on-body entered signal to emit the hit
+04:41 
+
+04:41 signal
+04:44 
+
+04:44 save the scene and then instantiate it
+04:46 
+
+04:46 inside the main scene
+04:48 
+
+04:48 you'll notice the ground image is twice
+04:50 
+
+04:50 as wide as the game window to give the
+04:52 
+
+04:52 impression of endless scrolling the
+04:54 
+
+04:54 ground image is slowly moved to the left
+04:56 
+
+04:56 eventually when it gets to the end of
+04:58 
+
+04:58 the image the whole thing is shifted
+04:60 
+
+04:60 back to the starting position and this
+05:02 
+
+05:02 is repeated over and over to make it
+05:04 
+
+05:04 seem like the ground is scrolling
+05:05 
+
+05:05 infinitely to set this up we need to get
+05:08 
+
+05:08 the screen size which we do inside the
+05:10 
+
+05:10 ready function then inside the process
+05:12 
+
+05:12 function we first check if the game is
+05:15 
+
+05:15 running and then increase the scroll
+05:17 
+
+05:17 variable once we scroll past the width
+05:19 
+
+05:19 of the screen reset that variable back
+05:21 
+
+05:21 to zero and start again we can then use
+05:24 
+
+05:24 the scroll variable to position the
+05:25 
+
+05:25 ground node now when the game is run you
+05:28 
+
+05:28 can see the ground scrolling along and
+05:30 
+
+05:30 it will continue repeating this
+05:31 
+
+05:31 indefinitely now we'll add the pipes
+05:33 
+
+05:33 create a new scene and add an area 2D
+05:36 
+
+05:36 node switch back to the 2D View and
+05:39 
+
+05:39 rename the node to pipe then save the
+05:41 
+
+05:41 scene add a 2d Sprite node and two
+05:44 
+
+05:44 Collision shape nodes for each pipe and
+05:46 
+
+05:46 load in the pipe texture for both images
+05:48 
+
+05:48 flip the upper pipe vertically and then
+05:51 
+
+05:51 adjust the white offset of both pipes to
+05:53 
+
+05:53 give the Gap that you want I use a 380
+05:56 
+
+05:56 and negative 380 for my offsides then
+05:59 
+
+05:59 create a rectangular Collision shape
+06:01 
+
+06:01 inside each of the Collision shaped
+06:02 
+
+06:02 nodes and adjust the size to match the
+06:05 
+
+06:05 pipe
+06:06 
+
+06:06 repeat the process with the remaining
+06:08 
+
+06:08 Collision shape nodes until both
+06:10 
+
+06:10 sections of the upper and lower pipe are
+06:12 
+
+06:12 accurately covered with Collision shapes
+06:14 
+
+06:14 with that done we can add a script which
+06:16 
+
+06:16 will have a hit signal then from the
+06:18 
+
+06:18 parent node connect on body entered to
+06:21 
+
+06:21 emit the head signal
+06:24 
+
+06:24 back in the main script create a timer
+06:28 
+
+06:28 rename it to pipe timer and set the wait
+06:30 
+
+06:30 time to one and a half seconds we won't
+06:33 
+
+06:33 manually add the pipes to the scene
+06:34 
+
+06:34 instead we'll create them in the code so
+06:38 
+
+06:38 we export the variable and drag over the
+06:40 
+
+06:40 pipe scene into it so we can access it
+06:42 
+
+06:42 from the script we also need to know the
+06:44 
+
+06:44 height of the ground so we can position
+06:46 
+
+06:46 the pipes correctly so we measure this
+06:48 
+
+06:48 in the ready function we want the pipes
+06:50 
+
+06:50 to be generated using the timer so
+06:52 
+
+06:52 connect the timeout signal to trigger a
+06:54 
+
+06:54 generate pipes function inside that
+06:56 
+
+06:56 function we instantiate the pipe scene
+06:59 
+
+06:59 in a variable called pipe then assign
+07:01 
+
+07:01 the x-coordinate to be at the end of the
+07:03 
+
+07:03 screen plus a small delay so that the
+07:05 
+
+07:05 pipe slides in from the right rather
+07:07 
+
+07:07 than just appearing out of the air the
+07:09 
+
+07:09 y-coordinate is based on the height of
+07:11 
+
+07:11 the available vertical space and a
+07:13 
+
+07:13 random value is added so that each pipe
+07:15 
+
+07:15 is at a different height this is where
+07:16 
+
+07:16 the pipe range variable from earlier
+07:18 
+
+07:18 comes in and it defines the limits for
+07:20 
+
+07:20 the random y coordinate value we also
+07:22 
+
+07:22 need to connect to the hit signal that
+07:24 
+
+07:24 the pipes are made when the bird
+07:26 
+
+07:26 collides with them and this will trigger
+07:27 
+
+07:27 the function bird hit which we'll Define
+07:29 
+
+07:29 shortly then we add a scene as a child
+07:32 
+
+07:32 of the main scene and add the pipes to
+07:34 
+
+07:34 our array to keep track of them back in
+07:36 
+
+07:36 the new game function I need to make
+07:37 
+
+07:37 sure to clear the pipes list and also
+07:39 
+
+07:39 generate a first set of pipes before the
+07:41 
+
+07:41 timer takes over to Auto generate the
+07:43 
+
+07:44 rest we will create a bird hit function
+07:46 
+
+07:46 and pass it for now to remove the error
+07:48 
+
+07:48 we still need to scroll the Pipestone in
+07:51 
+
+07:51 the process function we iterate through
+07:52 
+
+07:52 the pipes list and update the position
+07:54 
+
+07:54 of each pipe last thing before we can
+07:57 
+
+07:57 test this out is to actually start the
+07:59 
+
+07:59 pipe timer which will be done in the
+08:01 
+
+08:01 start game function now we can see as
+08:03 
+
+08:03 the bird moves along there's pipes being
+08:05 
+
+08:05 generated and coming in from the right
+08:07 
+
+08:07 hand side notice that the pipes appear
+08:09 
+
+08:09 in front of the ground we need to change
+08:11 
+
+08:11 the draw order so that the ground
+08:12 
+
+08:12 appears on top
+08:14 
+
+08:14 go into the ground node select ordering
+08:16 
+
+08:16 and then change the Z index to 1. now
+08:19 
+
+08:19 the ground will be drawn over the pipes
+08:21 
+
+08:21 which we can see when we run the game
+08:23 
+
+08:23 again next let's work on the Collision
+08:25 
+
+08:25 checks the first check is to stop the
+08:27 
+
+08:27 bird going off the top of the screen I
+08:29 
+
+08:29 create a check top function which looks
+08:32 
+
+08:32 at the bird's y-coordinate if it's below
+08:34 
+
+08:34 zero then it is off the screen so I set
+08:36 
+
+08:36 the bird to following and I stop the
+08:38 
+
+08:38 game the stop game function stops the
+08:40 
+
+08:40 timer stops the bird flying and updates
+08:43 
+
+08:43 the two game state flags the check top
+08:46 
+
+08:46 function needs to be called somewhere
+08:48 
+
+08:48 and this is done in the input function
+08:50 
+
+08:50 as soon as the bird flaps now you can
+08:52 
+
+08:52 see that when the part flies too high
+08:54 
+
+08:54 and it goes off the screen it will die
+08:56 
+
+08:56 and fall down to the ground next we will
+08:58 
+
+08:58 fill out the bird head function to do
+08:60 
+
+08:60 the same thing Run the game again and
+09:02 
+
+09:02 this time when I hit one of the pipes
+09:04 
+
+09:04 the bird dies and falls to the ground
+09:06 
+
+09:06 but collusion with the ground also needs
+09:08 
+
+09:08 to be checked we're already emitting a
+09:11 
+
+09:11 signal from the ground node so we
+09:12 
+
+09:12 connect that to the main script and
+09:14 
+
+09:14 inside the function set the following
+09:16 
+
+09:16 variable to false and stop the game
+09:19 
+
+09:19 running it now will show that when the
+09:21 
+
+09:21 bird hits the pipe it will keep falling
+09:23 
+
+09:23 until it has the ground and then it
+09:25 
+
+09:25 stops next we need a way of scoring
+09:27 
+
+09:27 points add a label node and rename it to
+09:30 
+
+09:30 score label
+09:31 
+
+09:31 add some placeholder text into it then
+09:34 
+
+09:34 adjust the position so it's anchored at
+09:36 
+
+09:36 the top Center the default font size is
+09:39 
+
+09:39 too small so I increase that to 40. and
+09:42 
+
+09:42 then change the Z index to 1 so the text
+09:44 
+
+09:44 is drawn over everything else to score
+09:47 
+
+09:47 the bird must go through a set of pipes
+09:49 
+
+09:49 back in the pipe scene add an area 2D
+09:52 
+
+09:52 with a collision shape child node then
+09:54 
+
+09:54 rename the area 2D node to score area
+09:58 
+
+09:58 select the rectangle Collision shape and
+10:00 
+
+10:00 resize this to form a rectangle just
+10:03 
+
+10:03 after the pipe exit
+10:05 
+
+10:05 inside the script we add a second signal
+10:08 
+
+10:08 and connect it to the score area
+10:12 
+
+10:12 in our main script inside the generate
+10:15 
+
+10:15 pipes function connect to that signal
+10:17 
+
+10:17 and Link it to a scored function the
+10:20 
+
+10:20 scored function will increase the score
+10:21 
+
+10:21 by 1 and update the label text we need
+10:24 
+
+10:24 to also update this label when we start
+10:27 
+
+10:27 a new game so the score is set to zero
+10:29 
+
+10:29 and the same code in the new game
+10:31 
+
+10:31 function and now whenever the bird
+10:33 
+
+10:33 passes through the set of pipes we get
+10:35 
+
+10:35 one point
+10:37 
+
+10:37 there's currently no way to restart the
+10:39 
+
+10:39 game when the bird dies so create a new
+10:42 
+
+10:42 scene with a canvas layer node and a
+10:44 
+
+10:44 button child node and give them
+10:45 
+
+10:45 meaningful names
+10:47 
+
+10:47 for the restart button create a new
+10:49 
+
+10:49 texture style box and drag over the
+10:52 
+
+10:52 restart button image to assign it
+10:56 
+
+10:56 repeat this for the hover and the Press
+10:58 
+
+10:58 States then update the size and position
+11:01 
+
+11:01 of the image in the transform property
+11:03 
+
+11:03 to match what I've got here
+11:06 
+
+11:06 add a script to the parent node
+11:08 
+
+11:08 create a restart signal
+11:12 
+
+11:12 and Link it to the button pressed
+11:15 
+
+11:15 back in the main script instantiate the
+11:17 
+
+11:17 game over screen to show the button
+11:21 
+
+11:21 this should only be visible when the bar
+11:23 
+
+11:23 dies so in a new game function hide the
+11:26 
+
+11:26 scene
+11:27 
+
+11:27 and then in a stop game function show
+11:30 
+
+11:30 the scene again
+11:31 
+
+11:31 finally link the restart signal to the
+11:34 
+
+11:34 new game function to reset everything
+11:37 
+
+11:37 running it now shows that when I die it
+11:40 
+
+11:40 brings up the restart button and when I
+11:42 
+
+11:42 click everything restarts to the
+11:43 
+
+11:43 beginning
+11:44 
+
+11:44 well almost everything
+11:46 
+
+11:46 notice that the pipes from the previous
+11:48 
+
+11:48 game are still there in the pipe scene
+11:51 
+
+11:51 select the parent node go to the node
+11:53 
+
+11:53 tab switch to groups and create a new
+11:56 
+
+11:56 group called pipes
+11:58 
+
+11:58 then inside the new game function use Q3
+12:02 
+
+12:02 to delete all the pipes in that group
+12:05 
+
+12:05 and that affects is the issue so when
+12:07 
+
+12:07 the bird hits one of the pipes and I
+12:08 
+
+12:08 restart everything goes back to how it
+12:11 
+
+12:11 was before
+12:12 
+
+12:12 and that's it you know how a working
+12:14 
+
+12:14 clone of Flappy Bird if you found this
+12:16 
+
+12:16 video useful then please leave a like
+12:18 
+
+12:18 and I'll see you in the next one
