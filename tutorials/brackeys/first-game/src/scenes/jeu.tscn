@@ -3,12 +3,12 @@
 [ext_resource type="Script" uid="uid://cqonwr30rd8d8" path="res://scripts/gestionnaire_jeu.gd" id="1_nmd05"]
 [ext_resource type="TileSet" uid="uid://c1jss88gcbo3y" path="res://scenes/jeu_de_tuiles.tres" id="1_r6v1x"]
 [ext_resource type="PackedScene" uid="uid://bfvrc6ombdpes" path="res://scenes/joueur.tscn" id="2_fgnw0"]
-[ext_resource type="FontFile" uid="uid://cwl0y75qvkbiu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_s2eh6"]
+[ext_resource type="FontFile" uid="uid://d02d3ujjw5c4b" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_s2eh6"]
 [ext_resource type="PackedScene" uid="uid://c6roofdnuotis" path="res://scenes/plateforme.tscn" id="3_fgnw0"]
 [ext_resource type="PackedScene" uid="uid://bblito0tdam6c" path="res://scenes/monnaie.tscn" id="4_g5o8c"]
 [ext_resource type="PackedScene" uid="uid://c6khp46qccvin" path="res://scenes/killzone.tscn" id="5_r6v1x"]
 [ext_resource type="PackedScene" uid="uid://c6d4urwlhwp13" path="res://scenes/slime.tscn" id="6_pw786"]
-[ext_resource type="FontFile" uid="uid://b4731wn27pq7w" path="res://assets/fonts/PixelOperator8.ttf" id="7_nm8ce"]
+[ext_resource type="FontFile" uid="uid://b4w7ktjgvlb05" path="res://assets/fonts/PixelOperator8.ttf" id="7_nm8ce"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pw786"]
 
