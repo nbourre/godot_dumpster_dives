@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dc5lbi7pjhh0i"]
+[gd_scene load_steps=5 format=3 uid="uid://dc5lbi7pjhh0i"]
 
-[ext_resource type="Script" path="res://level_01.gd" id="1_25fpc"]
-[ext_resource type="PackedScene" uid="uid://cycu1hvt0wetg" path="res://level_goal.tscn" id="2_eagag"]
+[ext_resource type="Script" uid="uid://0xii0e5p4qcr" path="res://scripts/level_01.gd" id="1_25fpc"]
+[ext_resource type="PackedScene" uid="uid://cycu1hvt0wetg" path="res://scenes/level_goal.tscn" id="2_eagag"]
+
+[sub_resource type="Gradient" id="Gradient_dvup1"]
+offsets = PackedFloat32Array(0, 0.64492756, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.47826087, 0.47826087, 0.47826087, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3imfn"]
+gradient = SubResource("Gradient_dvup1")
+fill_to = Vector2(1, 1)
 
 [node name="Level01" type="Node2D"]
 script = ExtResource("1_25fpc")
@@ -12,6 +20,8 @@ script = ExtResource("1_25fpc")
 polygon = PackedVector2Array(0, 0, 250, 0, 250, 3000, 2500, 3000, 2500, 0, 2750, 0, 2750, 3250, 0, 3250)
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
+texture = SubResource("GradientTexture2D_3imfn")
+texture_rotation = 0.12915437
 polygon = PackedVector2Array(0, 0, 250, 0, 250, 3000, 2500, 3000, 2500, 0, 2750, 0, 2750, 3250, 0, 3250)
 
 [node name="StartingPoint" type="Marker2D" parent="."]

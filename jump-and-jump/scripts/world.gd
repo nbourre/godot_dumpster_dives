@@ -14,7 +14,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if (!level_ready and lvl_mgr.current_level != null):
 		level_ready = true
 		cam.set_zoom_width(lvl_mgr.get_level_width())

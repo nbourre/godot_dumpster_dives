@@ -1,7 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cycu1hvt0wetg"]
 
-[ext_resource type="Script" path="res://level_goal.gd" id="1_8a2ld"]
-[ext_resource type="Shader" path="res://level_goal.gdshader" id="2_kuqh5"]
+[ext_resource type="Script" uid="uid://blbr6gbe5xwex" path="res://scripts/level_goal.gd" id="1_8a2ld"]
+[ext_resource type="Shader" uid="uid://dfqg8epim58uc" path="res://shaders/level_goal.gdshader" id="2_kuqh5"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yv74i"]
 size = Vector2(160, 40)
