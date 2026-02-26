@@ -1,3 +1,23 @@
 [gd_scene format=3 uid="uid://dv7pvobql7lqi"]
 
+[ext_resource type="PackedScene" uid="uid://c51n2hv7ed4ir" path="res://scenes/block.tscn" id="1_2q6dc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rd3vj"]
+size = Vector2(400, 50)
+
 [node name="Level" type="Node2D" unique_id=757444235]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=617739015]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1642401337]
+shape = SubResource("RectangleShape2D_rd3vj")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=1855633135]
+offset_left = -200.0
+offset_top = -25.0
+offset_right = 200.0
+offset_bottom = 25.0
+
+[node name="Block" parent="." unique_id=1741060862 instance=ExtResource("1_2q6dc")]
+position = Vector2(178, -50)

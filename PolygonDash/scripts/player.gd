@@ -15,7 +15,7 @@ var rotation_mult := -1.0
 func _physics_process(delta: float) -> void:
 	raycast_ground.rotation = -rotation
 	var is_grounded : bool = raycast_ground.is_colliding()
-
+	
 	if not is_grounded:
 		velocity.y += gravity * delta
 		
@@ -32,6 +32,6 @@ func _physics_process(delta: float) -> void:
 	if rotation >= TAU or rotation <= -TAU:
 		rotation = 0.0
 
-	#velocity.x = speed
+	velocity.x = speed
 
 	move_and_slide()

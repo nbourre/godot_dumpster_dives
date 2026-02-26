@@ -1,23 +1,12 @@
 [gd_scene format=3 uid="uid://toel8aguf2wx"]
 
 [ext_resource type="PackedScene" uid="uid://dgo8pxdbqbaek" path="res://scenes/player.tscn" id="1_nnsk1"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rwgxs"]
-size = Vector2(400, 50)
+[ext_resource type="PackedScene" uid="uid://dv7pvobql7lqi" path="res://scenes/level.tscn" id="2_rwgxs"]
 
 [node name="World" type="Node2D" unique_id=1082172402]
 
 [node name="Player" parent="." unique_id=91338066 instance=ExtResource("1_nnsk1")]
 position = Vector2(464, 351)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1295336088]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=801407554]
-position = Vector2(480, 400)
-shape = SubResource("RectangleShape2D_rwgxs")
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=266793623]
-offset_left = 280.0
-offset_top = 375.0
-offset_right = 680.0
-offset_bottom = 425.0
+[node name="Level" parent="." unique_id=757444235 instance=ExtResource("2_rwgxs")]
+position = Vector2(609, 569)
