@@ -22,7 +22,7 @@ func _physics_process(delta: float) -> void:
 		# Spin while in the air
 		rotation -= 0.1 * rotation_mult
 	else:
-		velocity.y = 0.0
+		#velocity.y = 0.0
 		if Input.is_action_just_pressed("jump"):
 			velocity.y += jump_force
 		

@@ -1,0 +1,77 @@
+[gd_scene format=4 uid="uid://drjpktuiim5hl"]
+
+[ext_resource type="Texture2D" uid="uid://bmb5j7i604srn" path="res://assets/blocks/tuiles_fusionnees.png" id="1_tjuek"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_47enk"]
+texture = ExtResource("1_tjuek")
+texture_region_size = Vector2i(45, 45)
+0:0/0 = 0
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.5, 8.284401, -0.63726044, 2.2304153, 22.5, 8, 22.5, 22.5, -22.5, 22.5)
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.5, -22.5, 22.5, -22.5, 22.5, 22.5, -22.5, 22.5)
+3:0/0 = 0
+3:0/0/terrain_set = 0
+3:0/0/terrain = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.5, -22.5, 22.5, -22.5, 22.5, 22.5, -22.5, 22.5)
+3:0/0/terrains_peering_bit/right_side = 0
+3:0/0/terrains_peering_bit/left_side = 0
+4:0/next_alternative_id = 2
+4:0/0 = 0
+4:0/0/terrain_set = 0
+4:0/0/terrain = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.5, -22.5, 22.5, -22.5, 22.5, 22.5, -22.5, 22.5)
+4:0/0/terrains_peering_bit/right_side = 0
+4:0/1 = 1
+4:0/1/flip_h = true
+4:0/1/terrain_set = 0
+4:0/1/terrain = 0
+4:0/1/terrains_peering_bit/left_side = 0
+5:0/0 = 0
+5:0/0/terrain_set = 0
+5:0/0/terrain = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.5, -22.5, 22.5, -22.5, 22.5, 22.5, -22.5, 22.5)
+5:0/0/terrains_peering_bit/right_side = 0
+5:0/0/terrains_peering_bit/left_side = 0
+5:0/0/terrains_peering_bit/top_side = 0
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.5, -22.5, 22.5, -22.5, 22.5, 22.5, -22.5, 22.5)
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.5, -22.5, 22.5, -22.5, 22.5, 22.5, -22.5, 22.5)
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.5, -22.5, 22.5, -22.5, 22.5, 22.5, -22.5, 22.5)
+0:1/0/terrains_peering_bit/bottom_side = 0
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.5, -22.5, 22.5, -22.5, 22.5, 22.5, -22.5, 22.5)
+1:1/0/terrains_peering_bit/bottom_side = 0
+1:1/0/terrains_peering_bit/top_side = 0
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.5, -22.5, 22.5, -22.5, 22.5, 22.5, -22.5, 22.5)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.5, -22.5, 22.5, -22.5, 22.5, 0, -22.5, 0)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 0, 22.5, 22.5, -22.5, 22.5)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -22.5, 22.5, 22.5, -22.5, 22.5)
+6:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_jx7lj"]
+tile_size = Vector2i(45, 45)
+physics_layer_0/collision_layer = 1
+terrain_set_0/mode = 2
+terrain_set_0/terrain_0/name = "Terrain 0"
+terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+sources/19 = SubResource("TileSetAtlasSource_47enk")
+tile_proxies/coords_level = [[2, Vector2i(0, 0)], [19, Vector2i(0, 0)], [3, Vector2i(0, 0)], [19, Vector2i(1, 0)], [4, Vector2i(0, 0)], [19, Vector2i(2, 0)], [5, Vector2i(0, 0)], [19, Vector2i(3, 0)], [6, Vector2i(0, 0)], [19, Vector2i(4, 0)], [7, Vector2i(0, 0)], [19, Vector2i(5, 0)], [8, Vector2i(0, 0)], [19, Vector2i(6, 0)], [9, Vector2i(0, 0)], [19, Vector2i(7, 0)], [10, Vector2i(0, 0)], [19, Vector2i(0, 1)], [11, Vector2i(0, 0)], [19, Vector2i(1, 1)], [12, Vector2i(0, 0)], [19, Vector2i(2, 1)], [13, Vector2i(0, 0)], [19, Vector2i(3, 1)], [14, Vector2i(0, 0)], [19, Vector2i(4, 1)], [15, Vector2i(0, 0)], [19, Vector2i(5, 1)], [16, Vector2i(0, 0)], [19, Vector2i(6, 1)]]
+
+[node name="TileMap" type="TileMapLayer" unique_id=1618324149]
+tile_map_data = PackedByteArray("AAAAAAAAEwAEAAAAAAABAAAAEwADAAAAAAACAAAAEwADAAAAAAADAAAAEwADAAAAAAAEAAAAEwADAAAAAAAFAAAAEwADAAAAAAAGAAAAEwADAAAAAAAHAAAAEwAEAAAAAQA=")
+tile_set = SubResource("TileSet_jx7lj")

@@ -16,7 +16,6 @@ texture = ExtResource("1_3vyb7")
 shape = SubResource("RectangleShape2D_qhqgy")
 
 [node name="GroundCheck" type="RayCast2D" parent="." unique_id=1407906888]
-target_position = Vector2(0, 25)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1281124545]
 offset = Vector2(300, 0)
