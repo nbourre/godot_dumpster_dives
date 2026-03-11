@@ -16,4 +16,4 @@ texture = ExtResource("1_3vyb7")
 shape = SubResource("RectangleShape2D_qhqgy")
 
 [node name="DetecteurSol" type="RayCast2D" parent="." unique_id=1407906888]
-target_position = Vector2(0, 33)
+target_position = Vector2(0, 35)

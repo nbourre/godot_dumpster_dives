@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bb60eigsdcpm0" path="res://scripts/monde.gd" id="1_4wyf3"]
 [ext_resource type="PackedScene" uid="uid://dgo8pxdbqbaek" path="res://scenes/joueur.tscn" id="1_nnsk1"]
 [ext_resource type="PackedScene" uid="uid://dv7pvobql7lqi" path="res://scenes/level.tscn" id="2_rwgxs"]
+[ext_resource type="Texture2D" uid="uid://c2hg0xsdnrvbf" path="res://assets/icon.svg" id="4_k0juu"]
 
 [node name="Monde" type="Node2D" unique_id=1082172402]
 script = ExtResource("1_4wyf3")
@@ -17,4 +18,10 @@ limit_top = 0
 limit_bottom = 1024
 
 [node name="Joueur" parent="." unique_id=91338066 instance=ExtResource("1_nnsk1")]
-position = Vector2(67, 460)
+position = Vector2(70, 460)
+
+[node name="Debug" type="Sprite2D" parent="." unique_id=526756009]
+visible = false
+position = Vector2(-3.8146973e-06, 34)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_k0juu")

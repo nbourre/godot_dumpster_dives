@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" format=3 uid="uid://bap1iuohqxmak"]
+[gd_resource type="TileSet" format=3 uid="uid://bprttsbl6onlq"]
 
 [ext_resource type="Texture2D" uid="uid://bmb5j7i604srn" path="res://assets/blocks/tuiles_fusionnees.png" id="1_5jcj7"]
 
@@ -8,6 +8,7 @@ texture_region_size = Vector2i(45, 45)
 0:0/0 = 0
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.5, 8.284401, -0.63726044, 2.2304153, 22.5, 8, 22.5, 22.5, -22.5, 22.5)
+1:0/0/custom_data_0 = true
 2:0/0 = 0
 2:0/0/terrain_set = 0
 2:0/0/terrain = 0
@@ -142,8 +143,10 @@ texture_region_size = Vector2i(45, 45)
 3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.5, -22.5, 22.5, -22.5, 22.5, 0, -22.5, 0)
 4:1/0 = 0
 4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 0, 22.5, 22.5, -22.5, 22.5)
+4:1/0/custom_data_0 = true
 5:1/0 = 0
 5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -22.5, 22.5, 22.5, -22.5, 22.5)
+5:1/0/custom_data_0 = true
 6:1/0 = 0
 
 [resource]
@@ -152,5 +155,7 @@ physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 2
 terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+custom_data_layer_0/name = "mortel"
+custom_data_layer_0/type = 1
 sources/19 = SubResource("TileSetAtlasSource_47enk")
 tile_proxies/coords_level = [[2, Vector2i(0, 0)], [19, Vector2i(0, 0)], [3, Vector2i(0, 0)], [19, Vector2i(1, 0)], [4, Vector2i(0, 0)], [19, Vector2i(2, 0)], [5, Vector2i(0, 0)], [19, Vector2i(3, 0)], [6, Vector2i(0, 0)], [19, Vector2i(4, 0)], [7, Vector2i(0, 0)], [19, Vector2i(5, 0)], [8, Vector2i(0, 0)], [19, Vector2i(6, 0)], [9, Vector2i(0, 0)], [19, Vector2i(7, 0)], [10, Vector2i(0, 0)], [19, Vector2i(0, 1)], [11, Vector2i(0, 0)], [19, Vector2i(1, 1)], [12, Vector2i(0, 0)], [19, Vector2i(2, 1)], [13, Vector2i(0, 0)], [19, Vector2i(3, 1)], [14, Vector2i(0, 0)], [19, Vector2i(4, 1)], [15, Vector2i(0, 0)], [19, Vector2i(5, 1)], [16, Vector2i(0, 0)], [19, Vector2i(6, 1)]]
