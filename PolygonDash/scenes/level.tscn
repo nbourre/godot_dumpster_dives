@@ -1,8 +1,60 @@
 [gd_scene format=4 uid="uid://dv7pvobql7lqi"]
 
-[ext_resource type="PackedScene" uid="uid://drjpktuiim5hl" path="res://scenes/tilemap.tscn" id="1_2q6dc"]
+[ext_resource type="Script" uid="uid://b8u1uvrobgiod" path="res://scripts/level.gd" id="1_ppgk2"]
+[ext_resource type="Texture2D" uid="uid://ceoufou655kff" path="res://assets/background.png" id="1_w7c3h"]
+[ext_resource type="Texture2D" uid="uid://cf2jd2fl2vprr" path="res://assets/floor.png" id="2_w8frs"]
+[ext_resource type="AudioStream" uid="uid://ddo8uq13umdmp" path="res://assets/audio/Stereo Madness.mp3" id="4_mx8sn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rd3vj"]
+size = Vector2(1024, 50)
 
 [node name="Level" type="Node2D" unique_id=757444235]
+script = ExtResource("1_ppgk2")
 
-[node name="TileMap" parent="." unique_id=1618324149 instance=ExtResource("1_2q6dc")]
-tile_map_data = PackedByteArray("AAD//wAAEwABAAEAAQAAAAAAEwABAAEAAQABAAAAEwABAAEAAQACAAAAEwABAAEAAQADAAAAEwABAAEAAQAEAAAAEwABAAEAAQAFAAAAEwABAAEAAQAGAAAAEwABAAEAAQAHAAAAEwADAAAAAQAIAAAAEwABAAEAAQAJAAAAEwABAAEAAQAKAAAAEwADAAAAAQALAAAAEwABAAEAAQAMAAAAEwABAAEAAQANAAAAEwADAAAAAQAOAAAAEwABAAEAAQAHAP//EwAAAAEAAAAKAP//EwABAAEAAAAKAP7/EwAAAAEAAAD+/wAAEwABAAEAAQD9/wAAEwABAAEAAQD8/wAAEwABAAEAAQD7/wAAEwAAAAEACAANAP//EwABAAEAAAANAP7/EwABAAEAAAANAP3/EwAAAAEAAAAPAAAAEwABAAEAAQAQAAAAEwABAAEAAQARAAAAEwABAAEAAQASAAAAEwABAAEAAQATAAAAEwABAAEAAQAUAAAAEwABAAEAAQAVAAAAEwAEAAAAAwAVAP3/EwAAAAEAAAAVAP7/EwABAAEAAAAVAP//EwABAAEAAAA=")
+[node name="Background" type="Node2D" parent="." unique_id=211442689]
+
+[node name="Parallax2D" type="Parallax2D" parent="Background" unique_id=2039574019]
+scroll_scale = Vector2(0.75, 0.75)
+repeat_size = Vector2(1024, 0)
+repeat_times = 3
+limit_begin = Vector2(-10000000, -1024)
+limit_end = Vector2(10000000, 1024)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D" unique_id=11084152]
+texture = ExtResource("1_w7c3h")
+
+[node name="ColorRect" type="ColorRect" parent="Background/Parallax2D" unique_id=218309366]
+offset_left = -512.0
+offset_top = -512.0
+offset_right = 512.0
+offset_bottom = 512.0
+color = Color(0, 0.3882353, 0.8509804, 0.67058825)
+
+[node name="Floor" type="Node2D" parent="." unique_id=2115458933]
+
+[node name="Parallax2D" type="Parallax2D" parent="Floor" unique_id=484975881]
+repeat_size = Vector2(1024, 0)
+repeat_times = 4
+limit_begin = Vector2(-10000000, -1024)
+limit_end = Vector2(10000000, 1024)
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor/Parallax2D" unique_id=1068908098]
+position = Vector2(0, 512)
+texture = ExtResource("2_w8frs")
+
+[node name="ColorRect" type="ColorRect" parent="Floor/Parallax2D" unique_id=268519526]
+offset_left = -512.0
+offset_right = 512.0
+offset_bottom = 1024.0
+color = Color(0, 0.39215687, 0.8509804, 0.6666667)
+
+[node name="FloorBody" type="StaticBody2D" parent="." unique_id=524567681]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FloorBody" unique_id=1642401337]
+position = Vector2(0, 27)
+shape = SubResource("RectangleShape2D_rd3vj")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=849577051]
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=974560301]
+stream = ExtResource("4_mx8sn")

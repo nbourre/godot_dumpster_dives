@@ -1,14 +1,20 @@
 [gd_scene format=3 uid="uid://toel8aguf2wx"]
 
-[ext_resource type="Script" uid="uid://b3glpe4dfsmrc" path="res://scenes/world.gd" id="1_4wyf3"]
-[ext_resource type="PackedScene" uid="uid://dgo8pxdbqbaek" path="res://scenes/player.tscn" id="1_nnsk1"]
+[ext_resource type="Script" uid="uid://bb60eigsdcpm0" path="res://scripts/monde.gd" id="1_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://dgo8pxdbqbaek" path="res://scenes/joueur.tscn" id="1_nnsk1"]
 [ext_resource type="PackedScene" uid="uid://dv7pvobql7lqi" path="res://scenes/level.tscn" id="2_rwgxs"]
 
-[node name="World" type="Node2D" unique_id=1082172402]
+[node name="Monde" type="Node2D" unique_id=1082172402]
 script = ExtResource("1_4wyf3")
 
-[node name="Player" parent="." unique_id=91338066 instance=ExtResource("1_nnsk1")]
-position = Vector2(460, 473)
-
 [node name="Level" parent="." unique_id=757444235 instance=ExtResource("2_rwgxs")]
-position = Vector2(609, 569)
+position = Vector2(0, 512)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=525276901]
+position = Vector2(171, 314)
+offset = Vector2(300, 0)
+limit_top = 0
+limit_bottom = 1024
+
+[node name="Joueur" parent="." unique_id=91338066 instance=ExtResource("1_nnsk1")]
+position = Vector2(67, 460)
