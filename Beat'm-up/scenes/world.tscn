@@ -1,0 +1,31 @@
+[gd_scene format=4 uid="uid://brjhd76ycsoio"]
+
+[ext_resource type="Texture2D" uid="uid://c4w2sm7cv24g3" path="res://assets/background/decor_Sunset.png" id="1_nnsk1"]
+[ext_resource type="PackedScene" uid="uid://dg0a3or04nu7y" path="res://scenes/character.tscn" id="2_rwgxs"]
+[ext_resource type="Texture2D" uid="uid://djnxvb7a21mk5" path="res://assets/icon.svg" id="3_4wyf3"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wyf3"]
+texture = ExtResource("3_4wyf3")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_71j4m"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/2 = SubResource("TileSetAtlasSource_4wyf3")
+
+[node name="World" type="Node2D" unique_id=1318817680]
+
+[node name="DecorSunset" type="Sprite2D" parent="." unique_id=1985282253]
+position = Vector2(60, 322)
+scale = Vector2(2.8660715, 2.8660712)
+texture = ExtResource("1_nnsk1")
+
+[node name="Character" parent="." unique_id=16058986 instance=ExtResource("2_rwgxs")]
+position = Vector2(0, 508)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=299151303]
+visible = false
+tile_map_data = PackedByteArray("AAD7/wAAAgAAAAAAAAD7/wEAAgAAAAAAAAD7/wIAAgAAAAAAAAD7/wMAAgAAAAAAAAD7/wQAAgAAAAAAAAD7/wUAAgAAAAAAAAD8/wUAAgAAAAAAAAD9/wUAAgAAAAAAAAD+/wUAAgAAAAAAAAD//wUAAgAAAAAAAAAAAAUAAgAAAAAAAAAFAAUAAgAAAAAAAAABAAUAAgAAAAAAAAACAAUAAgAAAAAAAAADAAUAAgAAAAAAAAAEAAUAAgAAAAAAAAAGAAUAAgAAAAAAAAAIAAUAAgAAAAAAAAAHAAUAAgAAAAAAAAAJAAUAAgAAAAAAAAAJAAQAAgAAAAAAAAAJAAMAAgAAAAAAAAAJAAIAAgAAAAAAAAAJAAEAAgAAAAAAAAAJAAAAAgAAAAAAAAAJAP//AgAAAAAAAAD8/wIAAgAAAAAAAAD9/wIAAgAAAAAAAAD+/wIAAgAAAAAAAAD//wIAAgAAAAAAAAAAAAIAAgAAAAAAAAABAAIAAgAAAAAAAAACAAIAAgAAAAAAAAADAAIAAgAAAAAAAAAEAAIAAgAAAAAAAAAFAAIAAgAAAAAAAAAGAAIAAgAAAAAAAAAHAAIAAgAAAAAAAAAIAAIAAgAAAAAAAAA=")
+tile_set = SubResource("TileSet_71j4m")
