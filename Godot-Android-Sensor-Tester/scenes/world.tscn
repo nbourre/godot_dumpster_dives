@@ -19,7 +19,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=869098235]
 layout_mode = 2
-text = "Just to keep my dev account alive"
+text = "Small app to test Sensors"
 
 [node name="HBoxAccelMagneto" type="HBoxContainer" parent="VBoxContainer" unique_id=303452828]
 layout_mode = 2
