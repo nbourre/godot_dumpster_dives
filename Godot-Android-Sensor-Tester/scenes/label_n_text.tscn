@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://1nxk8sd17s3y"]
+
+[ext_resource type="Script" uid="uid://dop4c08xxhefw" path="res://scripts/label_n_text.gd" id="1_chc1l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_chc1l"]
+bg_color = Color(0.6, 0.6, 0.6, 0.29411766)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n23o6"]
+
+[node name="LabelNText" type="HBoxContainer" unique_id=1493567957]
+offset_right = 200.0
+offset_bottom = 23.0
+script = ExtResource("1_chc1l")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="." unique_id=47837271]
+layout_mode = 2
+text = "Long text :"
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=1737975630]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/line_spacing = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_chc1l")
+theme_override_styles/focus = SubResource("StyleBoxFlat_n23o6")
+text = "Long Text"

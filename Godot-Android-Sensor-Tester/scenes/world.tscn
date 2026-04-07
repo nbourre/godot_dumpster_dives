@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://c63okpciymjjd"]
+
+[ext_resource type="PackedScene" uid="uid://1nxk8sd17s3y" path="res://scenes/label_n_text.tscn" id="1_nnsk1"]
+[ext_resource type="Script" uid="uid://dx4nqgsvm6hxd" path="res://scripts/world.gd" id="1_rwgxs"]
+
+[node name="World" type="Node2D" unique_id=537297691]
+script = ExtResource("1_rwgxs")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1673434116]
+offset_right = 718.0
+offset_bottom = 193.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1866105992]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+metadata/_edit_group_ = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=869098235]
+layout_mode = 2
+text = "Just to keep my dev account alive"
+
+[node name="HBoxAccelMagneto" type="HBoxContainer" parent="VBoxContainer" unique_id=303452828]
+layout_mode = 2
+
+[node name="VBoxLeft" type="VBoxContainer" parent="VBoxContainer/HBoxAccelMagneto" unique_id=1455380853]
+layout_mode = 2
+size_flags_horizontal = 3
+metadata/_edit_group_ = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxAccelMagneto/VBoxLeft" unique_id=696136603]
+layout_mode = 2
+text = "Accelerometer"
+
+[node name="LPFEnable" type="CheckBox" parent="VBoxContainer/HBoxAccelMagneto/VBoxLeft" unique_id=1664810335]
+layout_mode = 2
+text = "Enable Low Pass Filter"
+
+[node name="AccX" parent="VBoxContainer/HBoxAccelMagneto/VBoxLeft" unique_id=1493567957 instance=ExtResource("1_nnsk1")]
+layout_mode = 2
+
+[node name="AccY" parent="VBoxContainer/HBoxAccelMagneto/VBoxLeft" unique_id=1709910562 instance=ExtResource("1_nnsk1")]
+layout_mode = 2
+
+[node name="AccZ" parent="VBoxContainer/HBoxAccelMagneto/VBoxLeft" unique_id=468839635 instance=ExtResource("1_nnsk1")]
+layout_mode = 2
+
+[node name="AccMagnitude" parent="VBoxContainer/HBoxAccelMagneto/VBoxLeft" unique_id=603349398 instance=ExtResource("1_nnsk1")]
+layout_mode = 2
+
+[node name="VBoxRight" type="VBoxContainer" parent="VBoxContainer/HBoxAccelMagneto" unique_id=570697446]
+layout_mode = 2
+size_flags_horizontal = 3
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxAccelMagneto/VBoxRight" unique_id=221522812]
+layout_mode = 2
+text = "Magnetometer"
+
+[node name="ui_mag_x" parent="VBoxContainer/HBoxAccelMagneto/VBoxRight" unique_id=268033 instance=ExtResource("1_nnsk1")]
+layout_mode = 2
+sensor_name = "Max X"
+
+[node name="ui_mag_y" parent="VBoxContainer/HBoxAccelMagneto/VBoxRight" unique_id=806069954 instance=ExtResource("1_nnsk1")]
+layout_mode = 2
+sensor_name = "Max X"
+
+[node name="ui_mag_z" parent="VBoxContainer/HBoxAccelMagneto/VBoxRight" unique_id=2116348751 instance=ExtResource("1_nnsk1")]
+layout_mode = 2
+sensor_name = "Max X"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=1728446246]
+layout_mode = 2
+text = "Quit"
